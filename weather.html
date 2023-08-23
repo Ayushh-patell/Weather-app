@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="weather.css">
+</head>
+
+<body>
+    <nav class="navbar sticky-top navbar-expand-lg bg-dark ">
+        <div class="container-fluid">
+            <a class="navbar-brand " href="weather.html">Weather</a>
+            <button class="navbar-toggler btn-primary" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="navbar-toggler-icon fa-solid fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#current_a">Current weather</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#hourly_a">Hourly Weather</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sun_a">Sun forecast</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="landing container-fluid align-items-center justify-content-center">
+        <form id="search_id" action="city_search.php" method="get"
+            class="d-flex justify-content-center align-items-center w-75" role="search">
+            <div class="input-group">
+                <input id="input" name="city" class="form-control" type="search" placeholder="City name"
+                    aria-label="Search">
+                <button name="submit" class="btn btn-primary input-group-append" type="submit">Search <div
+                        class="loading justify-content-center align-items-center">
+                        <img src="progress_spinner.gif" alt="">
+                    </div>
+                </button>
+            </div>
+        </form>
+    </div>
+    <main class="flex-column align-items-center main_content container">
+        <div class="container mt-5">
+            <div id="current" class="row">
+                <div class="col-10 text-light">
+                    <div class="row">
+                        <h3 id="current_a" class="position-absolute current text-light">Current Weather</h3>
+                        <div class="col mb-4 row">
+                            <div class="col-8">
+                                <span id="curr_time"></span>
+                                <span id="curr_date"></span>
+                            </div>
+                            <div id="curr_temp" class="col-4"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2 d-flex align-items-center position-relative">
+                    <div class=" icon_spin">
+                        <ion-icon class="cloud_icon" name="cloudy"></ion-icon>
+                        <i class="fa-solid fa-sun sun_icon"></i>
+                    </div>
+                </div>
+                <div class="row">
+                    <div
+                        class="col d-flex justify-content-around align-items-center bg-primary text-light rounded-pill me-2 p-2">
+                        <div id="curr_winds"></div>
+                    </div>
+
+                    <div id="curr_windd" class="col bg-primary text-light rounded-pill p-2"></div>
+                </div>
+            </div>
+            <h3 id="hourly_a" class=" hourly position-absolute text-light">Hourly Weather</h3>
+
+            <div id="hourly" class="container mt-5 mb-5 ">
+                <div class="hourly_head card bg-primary text-light row align-items-center">
+                    <p class="col-3">Time
+                        <ion-icon name="time"></ion-icon>
+                    </p>
+                    <p class="col-2 col-md-3">Rain
+                        <ion-icon name="rainy"></ion-icon>
+                    </p>
+                    <p class="col-3">Shower
+                        <ion-icon name="thunderstorm"></ion-icon>
+                    </p>
+                    <p class="col-4 col-md-3">Precipitation%
+                        <ion-icon name="water"></ion-icon>
+                    </p>
+                </div>
+            </div>
+            <h3 id="sun_a" class=" position-absolute text-light">Sun Forecast</h3>
+            <div id="sun" class=" position-relative w-75 m-auto">
+                <div class="row card justify-content-center riseset text-light row align-items-center">
+                    <div class="row date justify-content-center"></div>
+                    <div class=" row justify-content-center bg-primary">
+                        <div class="col-md position-relative">
+                            <p>Sunrise</p>
+                            <div class="icon icon_spin ">
+                                <i class="fa-solid fa-water "></i>
+                                <i class="fa-solid fa-sun"></i>
+                            </div>
+                            <div class="col rise d-flex justify-content-center"></div>
+                        </div>
+                        <div class="col-md position-relative">
+                            <p>Sunset</p>
+                            <div class="icon icon_spin ">
+                                <i class="fa-solid fa-water"></i>
+                                <i class="fa-solid fa-sun"></i>
+                            </div>
+                            <div class="col set d-flex justify-content-center"></div>
+                        </div>
+                    </div>
+                    <div class="row uv justify-content-center"></div>
+                </div>
+            </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="weather.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://kit.fontawesome.com/a90c6f7e11.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,257 @@
+* {
+    scroll-padding: 60px;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(clouds-g9b330670a_1920.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    box-shadow: inset 0 0 0 2000px #000e457a;
+}
+
+main {
+    display: none;
+}
+
+.landing {
+    height: 100vh;
+    width: 100%;
+    background-image: url(clouds-g9b330670a_1920.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    box-shadow: inset 0 0 0 2000px #1c1c1c7a;
+}
+
+.row {
+    --bs-gutter-x: 0:
+}
+
+#current {
+    background: linear-gradient(rgba(0, 0, 0, 0.126), rgba(0, 0, 0, 0.071));
+    border-radius: 10px;
+    border-bottom: 3px solid skyblue;
+    --bs-gutter-x: 0rem;
+}
+
+.navbar {
+    z-index: 1000;
+}
+
+.navbar-toggler {
+    background-color: #0d6efd;
+    width: 30px;
+    height: 30px;
+    position: relative;
+}
+
+.fa-bars {
+    position: absolute;
+    top: 15%;
+    left: 0;
+}
+
+.current {
+    font-size: 170%;
+    top: 55px;
+    left: 5px;
+}
+
+#curr_time {
+    font-size: 30px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+#curr_temp {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#curr_winds,
+#curr_windd {
+    text-align: center;
+}
+
+.fa-wind {
+    display: inline-block;
+}
+
+#curr_winds {
+    display: inline-block;
+}
+
+.sun_icon {
+    position: absolute;
+    font-size: 300%;
+    color: gold;
+    text-shadow: 0 0;
+    left: 18%;
+}
+
+.cloud_icon {
+    position: relative;
+    font-size: 400%;
+    color: skyblue;
+    z-index: 1;
+}
+
+.hourly {
+    font-size: 170%;
+    top: 225px;
+    left: 20px;
+}
+
+#hourly {
+    position: relative;
+    height: 500px;
+    overflow: scroll;
+    border-radius: 7px;
+}
+
+.hourly_card {
+    border-radius: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.286), rgba(0, 0, 0, 0.226));
+}
+
+.card {
+    flex-direction: row;
+}
+
+.hourly_head {
+    padding: 1rem;
+    z-index: 10;
+    position: sticky;
+    top: 0;
+    border-radius: 7px 7px 0 0;
+}
+
+.hourly_head p {
+    margin: 0;
+    padding: 0;
+}
+
+.hourly_head p ion-icon {
+    position: relative;
+    top: 12%;
+}
+
+.riseset {
+    margin: 10px 0;
+    background-color: #074db7;
+}
+
+.riseset div {
+    padding: 10px 0;
+    text-align: center;
+}
+
+.riseset div p {
+    margin: 0;
+}
+
+.date {
+    font-size: 150%;
+}
+
+#sun_a {
+    font-size: 170%;
+    top: 770px;
+    left: 20px;
+}
+
+.icon {
+    position: absolute;
+    aspect-ratio: 1/1;
+    width: 60px;
+    left: 10%;
+}
+
+.icon i {
+    top: 0;
+    position: absolute;
+    font-size: 200%;
+}
+
+.icon .fa-sun {
+    color: gold;
+    z-index: 1;
+    top: -25%;
+    right: -7%;
+}
+
+.icon .fa-water {
+    background-color: #0d6efd;
+}
+
+.icon .fa-mountain,
+.icon .fa-water {
+    z-index: 2;
+}
+
+.loading {
+    height: 30px;
+    width: 30px;
+    z-index: 1000;
+    position: absolute;
+    display: none;
+    right: 0;
+    top: 4px;
+}
+
+.loading img {
+    width: 20px;
+    height: 20px;
+}
+
+#search_id button {
+    width: 102px;
+}
+
+@media screen and (max-width:456px) {
+    .hourly_head {
+        padding: 0;
+    }
+    .hourly_head p ion-icon {
+        left: -5%;
+    }
+    #hourly {
+        padding: 0 !important;
+    }
+    .icon {
+        left: 5%;
+    }
+}
+@media screen and (max-width:360px) {
+    .hourly {
+        top: 220px;
+    }
+
+    #sun_a {
+        top: 770px;
+    }
+
+    main {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+
+    .current {
+        font-size: 150%;
+    }
+}
+
+@media screen and (max-width:336px) {
+    .hourly {
+        top: 270px;
+    }
+
+    #sun_a {
+        top: 820px;
+    }
+}
