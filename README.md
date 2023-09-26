@@ -9,13 +9,13 @@ This project is a weather application that provides current weather conditions, 
 * City Search:
         Allows users to search for major cities worldwide to view weather information.
   
-   * Current Weather:
+* Current Weather:
         Provides  the current weather conditions for the searched city.
 
-   * Hourly Weather for 3 Days:
+ * Hourly Weather for 3 Days:
         Offers an hourly weather forecast for the next 3 days.
 
-   * UV Index:
+* UV Index:
         Provides UV index for today in the searched city.
      
 ## Technologies Used
