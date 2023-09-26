@@ -27,7 +27,7 @@ This project is a weather application that provides current weather conditions, 
    * CSS
    * JavaScript
 
-How to Use
+## How to Use
 Simply enter the name of the city you want to get weather information for in the Search bar.
 
 
